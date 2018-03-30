@@ -25,4 +25,5 @@ git checkout master
 git pull
 
 Если еще нужно что-то сделать повторяете шаги начиная со 2.
+
 P.S. решения Григорий здесь https://github.com/theBaldSoprano/2018ifmoJavaBasics
