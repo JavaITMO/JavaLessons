@@ -1,0 +1,22 @@
+import java.util.TreeMap;
+
+public class FindSign {
+
+    public char oftenMeet(String str){
+        Map<Character, Integer> offer= new HashMap<>();
+        class Max {Integer count = 0; Character character;}
+        Max value = new Max();
+        for (char i: str.toLowerCase().toCharArray()) {
+                offer.put(i, !offer.containsKey(i) ? 1 : offer.get(i)+1 );
+                 value.count = value.count > offer.get(i) ? value.count : offer.get(i);
+                 value.character = value.count > offer.get(i) ? value.character :i;
+        }
+        return value.character;
+    }
+
+    public static void main(String[] args) {
+        FindSign str = new FindSign();
+        String text = "jjj uuuuuuuuuu kkkk";
+        System.out.println(str.oftenMeet(text));
+    }
+}
